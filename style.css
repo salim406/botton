@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.box{
+	width: 250px;
+	height: 50px;
+	margin: auto;
+	margin-top: 150px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+h1{
+	transition: 5s;
+}
+h1::before{
+	content: "";
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10px;
+	height: 100%;
+	border-radius: 20px;
+     transition: 0.5s;
+
+}
+
+.box:hover h1::before{
+	background: green;
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	z-index: -1;
+}
+
+.box:hover h1{
+	color:white;
+	letter-spacing: 10px;
+}
+
+
